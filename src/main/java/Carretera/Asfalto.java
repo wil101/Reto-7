@@ -4,10 +4,6 @@ package Carretera;
  */
 public class Asfalto extends TramoGenerico {
     
-    private double xInit;
-    private double yInit;
-    private double xFinal;
-    private double yFinal;
     private String proveedor;
     private int velMax;
     private boolean adelantar;
@@ -43,5 +39,6 @@ public class Asfalto extends TramoGenerico {
     public double volumen() {
         return area()*0.25;
     }
+    
     
 }

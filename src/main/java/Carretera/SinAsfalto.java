@@ -3,10 +3,7 @@ package Carretera;
  * @author emanuel.lopezh
  */
 public class SinAsfalto extends TramoGenerico{
-    private double xInit;
-    private double yInit;
-    private double xFinal;
-    private double yFinal;
+   
     private String material;
     private double espesor;
 
@@ -36,4 +33,28 @@ public class SinAsfalto extends TramoGenerico{
     public double volumen() {
         return area()*this.espesor;
     }
+    
+    /*aca puse esto para la comparacion por tipo de material pero a la final no lo utilice entonces si quiere lo quita jajaja */ 
+    public void material(){
+        int tipo = 0;
+        System.out.println("escoga el tipo de material entre los tres disponibles");
+        System.out.println("escriba: *uno* para seleccionar la piedra ");
+        System.out.println("escribra: *dos* para seleccionar la arena ");
+        System.out.println("escriba: *tres* para seleccionar el balastro ");
+        
+        switch (tipo){
+            case 1: 
+                material = "piedra";
+                break;
+            case 2: 
+                material = "arena";
+                break;
+            case 3: 
+                material = "balastro";
+                break;
+        }
+    }
+
+   
+    
 }
