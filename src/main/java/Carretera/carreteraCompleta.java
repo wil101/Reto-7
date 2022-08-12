@@ -43,21 +43,26 @@ public class carreteraCompleta {
         return volumenTotal;
     }
  
-    /* en esta parte del volumen todavia no esta diseñada para que solo que coja lo asfaltado*/ 
+    /* en esta parte del volumen ya esta lista creo*/ 
     public double volumenAsfalto() {
         double volumenAsfalto = 0;
         for (int i = 0; i <= tramosCarreteras.size(); i++) {
-            volumenAsfalto += tramosCarreteras.get(i).volumen();
+           if(tramosCarreteras.get(i).getClass().getSimpleName().equals("Asfalto")){volumenAsfalto += tramosCarreteras.get(i).volumen();
+           } 
         }
+        System.out.println(volumenAsfalto);
         return volumenAsfalto;
+        
     }
-    /* esta parte del volumen no esta diseñada todavia para que me coga la parte sinasfalto solamente*/
+    /* tambien esta lista creo esperemos que si*/
 
     public double volumenSinAsfalto() {
         double volumenSinAsfalto = 0;
         for (int i = 0; i <= tramosCarreteras.size(); i++) {
-            volumenSinAsfalto += tramosCarreteras.get(i).volumen();
+            if(tramosCarreteras.get(i).getClass().getSimpleName().equals("SinAsfalto")){volumenSinAsfalto += tramosCarreteras.get(i).volumen();
         }
+            
+    }
         return volumenSinAsfalto;
     }
 

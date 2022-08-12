@@ -10,7 +10,11 @@ package Carretera;
  */
 public class Main {
     public static void main(String[] args){
-        System.out.println(Math.pow(2, 3));
+        /*System.out.println(Math.pow(2, 3));*/
+        
+        TramoGenerico comepicha = new Asfalto(5, 8, 16, 20, "su");
+        
+        
         
     }
 }
