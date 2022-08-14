@@ -3,10 +3,7 @@ package Carretera;
  * @author emanuel.lopezh
  */
 public class SinAsfalto extends TramoGenerico{
-    private double xInit;
-    private double yInit;
-    private double xFinal;
-    private double yFinal;
+   
     private String material;
     private double espesor;
 
@@ -15,11 +12,24 @@ public class SinAsfalto extends TramoGenerico{
         this.yInit = yInit;
         this.xFinal = xFinal;
         this.yFinal = yFinal;
-        this.material = material;
+        
+        switch (material){
+            case "piedra":
+                this.material = "piedra";
+                break;
+            case "arena":
+                this.material = "arena";
+                break;
+            case "balastro":
+                this.material = "balastro";
+                break;
+            default:
+                this.material = "piedra";
+                break;
+        }
+
         this.espesor = espesor;
     }
-
-    
 
     @Override
     public double longitud() {
@@ -35,5 +45,6 @@ public class SinAsfalto extends TramoGenerico{
     @Override
     public double volumen() {
         return area()*this.espesor;
-    }
+    }    
+    
 }
