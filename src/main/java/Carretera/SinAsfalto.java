@@ -12,11 +12,24 @@ public class SinAsfalto extends TramoGenerico{
         this.yInit = yInit;
         this.xFinal = xFinal;
         this.yFinal = yFinal;
-        this.material = material;
+        
+        switch (material){
+            case "piedra":
+                this.material = "piedra";
+                break;
+            case "arena":
+                this.material = "arena";
+                break;
+            case "balastro":
+                this.material = "balastro";
+                break;
+            default:
+                this.material = "piedra";
+                break;
+        }
+
         this.espesor = espesor;
     }
-
-    
 
     @Override
     public double longitud() {
@@ -32,29 +45,6 @@ public class SinAsfalto extends TramoGenerico{
     @Override
     public double volumen() {
         return area()*this.espesor;
-    }
-    
-    /*aca puse esto para la comparacion por tipo de material pero a la final no lo utilice entonces si quiere lo quita jajaja */ 
-    public void material(){
-        int tipo = 0;
-        System.out.println("escoga el tipo de material entre los tres disponibles");
-        System.out.println("escriba: *uno* para seleccionar la piedra ");
-        System.out.println("escribra: *dos* para seleccionar la arena ");
-        System.out.println("escriba: *tres* para seleccionar el balastro ");
-        
-        switch (tipo){
-            case 1: 
-                material = "piedra";
-                break;
-            case 2: 
-                material = "arena";
-                break;
-            case 3: 
-                material = "balastro";
-                break;
-        }
-    }
-
-   
+    }    
     
 }
